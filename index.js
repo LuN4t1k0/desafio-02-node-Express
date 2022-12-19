@@ -1,6 +1,10 @@
-const express = require("express")
+const express = require("express");
 const app = express();
+const port = 3000;
 
-app.listen(3000, console.log("servidor funcionando"))
 
-app.length
+app.listen(port, console.log(`Servidor funcionado en el puerto : ${port}`));
+
+app.get("/", (req, res) => {
+  res.send("Hello Word")
+})
